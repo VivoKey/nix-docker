@@ -17,10 +17,14 @@
         copyToRoot = with pkgs; [
           nix
           docker
+          bash
         ];
         config = {
           Env = [
             "NIX_CONFIG=experimental-features = nix-command flakes"
+          ];
+          Cmd = [ 
+            "bash" 
           ];
         };
       };
