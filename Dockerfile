@@ -2,8 +2,7 @@ FROM nixos/nix:latest
 
 ENV NIX_CONFIG="experimental-features = nix-command flakes"
 
-RUN nix-build -A bash '<nixpkgs>' && \
-    nix-build -A skopeo '<nixpkgs>'
+RUN nix profile install nixpkgs#skopeo
 
 WORKDIR /drone/src
 
