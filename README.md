@@ -3,3 +3,6 @@
 # nix-docker
 
 Docker CI image with Nix and Docker tooling, for use with Drone CI.
+
+Also includes `skopeo`.
+ 
