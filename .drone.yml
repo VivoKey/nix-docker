@@ -5,8 +5,10 @@ steps:
 - name: build  
   image: plugins/docker
   settings:
-    username: $docker_username
-    password: $docker_password
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
     repo: vivokey/nix-docker
     tags:
     - latest
