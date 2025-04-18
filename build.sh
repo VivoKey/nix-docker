@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-nix build .#dockerImage && docker load < result && docker push vivokey/nix-docker:latest
+docker build -t vivokey/nix-docker:latest . 
+# docker push vivokey/nix-docker:latest
